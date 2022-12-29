@@ -22,7 +22,7 @@ export default {
 
 <template>
   <main>
-    <h2>Welcome to Simple Genshin Impact Character Database</h2>
+    <h2>Welcome to Simple Genshin Impact Characters Database</h2>
     <div class="flex wrap content-center mx-1">
       <div v-for='item in characterList' class="card">
         <router-link :to="'/' + item">
