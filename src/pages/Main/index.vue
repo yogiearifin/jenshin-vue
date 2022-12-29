@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { BASE_URL, capitalLetter } from '@/helpers/helpers';
+import Spinner from '@/components/Spinner/index.vue';
 </script>
 <script lang="ts">
 export default {
@@ -24,7 +25,7 @@ export default {
   <main>
     <h2>Welcome to Simple Genshin Impact Characters Database</h2>
     <div class="flex wrap content-center mx-1">
-      <div v-for='item in characterList' class="card">
+      <div v-for='item in characterList' class="card" v-if="characterList.length">
         <router-link :to="'/' + item">
           <div>
             <img :src="BASE_URL + '/characters/' + item + '/icon-big' + (item.includes('traveler') ? '-lumine' : '')"
@@ -34,6 +35,9 @@ export default {
             </p>
           </div>
         </router-link>
+      </div>
+      <div v-else class="flex content-center">
+        <Spinner />
       </div>
     </div>
   </main>

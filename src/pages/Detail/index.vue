@@ -1,7 +1,10 @@
 <template>
   <main>
-    <h1>{{ characterDetail.name && characterDetail.name ? characterDetail.name && characterDetail.name : 'Loading...' }}
+    <h1 v-if="characterDetail.name">{{ characterDetail.name }}
     </h1>
+    <div v-else class="flex content-center">
+      <Spinner />
+    </div>
     <div v-if="characterDetail.name.length">
       <h4>{{ characterDetail.title && characterDetail.title }}</h4>
       <p class="star">{{ characterDetail.rarity && renderStar(characterDetail.rarity) }}</p>
@@ -41,6 +44,7 @@
 </template>
 <script setup lang="ts">
 import { BASE_URL, archon } from '@/helpers/helpers';
+import Spinner from '@/components/Spinner/index.vue';
 </script>
 <script lang="ts">
 import { useRouter } from 'vue-router';
