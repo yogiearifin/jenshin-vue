@@ -3,6 +3,9 @@
     <router-link to="/">
       <h1>Genshin Impact Characters Database</h1>
     </router-link>
+    <router-link to="/favorite">
+      <button class="favorite-button background-secondary">Favorite Characters</button>
+    </router-link>
   </nav>
 </template>
 <script setup lang="ts">

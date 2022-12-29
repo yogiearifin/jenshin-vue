@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BASE_URL } from '@/helpers/helpers';
+import { BASE_URL, capitalLetter } from '@/helpers/helpers';
 </script>
 <script lang="ts">
 export default {
@@ -13,13 +13,6 @@ export default {
       const res: string[] = await (await fetch("https://api.genshin.dev/characters")).json();
       this.characterList = res;
     },
-    capitalLetter(str: string) {
-      const newStr = str.split(" ");
-      for (let i = 0; i < newStr.length; i++) {
-        newStr[i] = newStr[i][0].toUpperCase() + newStr[i].substr(1);
-      }
-      return newStr.join(" ");
-    }
   },
   mounted() {
     this.getData();
@@ -28,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <main class="p-1">
+  <main>
     <h2>Welcome to Simple Genshin Impact Character Database</h2>
     <div class="flex wrap content-center mx-1">
       <div v-for='item in characterList' class="card">

@@ -12,6 +12,7 @@ main {
   background-color: #415a77;
   color: #fff;
   min-height: 70vh;
+  padding: 1em;
 }
 
 main h2,
@@ -27,18 +28,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-.background-main {
-  background-color: #0d1b2a;
-}
-
-.color-primary {
-  color: #fff;
-}
-
-.color-secondary {
-  color: #e0e1dd;
 }
 
 footer,
@@ -64,6 +53,10 @@ nav {
 
 .content-center {
   justify-content: center;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .card {
@@ -92,4 +85,38 @@ nav {
 .card p {
   white-space: nowrap;
   font-weight: 600;
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.favorite-button:hover {
+  background-color: #778da9;
+}
+
+.favorite-button:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.background-main {
+  background-color: #0d1b2a;
+}
+
+.background-secondary {
+  background-color: #415a77;
+}
+
+.color-primary {
+  color: #fff;
+}
+
+.color-secondary {
+  color: #e0e1dd;
 }
