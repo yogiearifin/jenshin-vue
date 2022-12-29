@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar background-main color-secondary p-1">
+  <nav class="navbar background-main color-secondary">
     <router-link to="/">
       <h1>Genshin Impact Characters Database</h1>
     </router-link>

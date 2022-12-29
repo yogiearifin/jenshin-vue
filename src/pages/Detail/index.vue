@@ -144,6 +144,7 @@ export default {
     if (localStorage.getItem('favorites')) {
       this.favorites = JSON.parse(localStorage.getItem('favorites') || '');
     }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
 </script>
